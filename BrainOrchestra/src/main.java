@@ -15,7 +15,9 @@ public class main {
 		int pollDuration = 20;
 		
 		EEGScheduler sched = new EEGScheduler(numReaders, pollInterval, pollDuration);
-		sched.execute();**/
+		sched.execute();**/ 
+		
+		System.out.println("cat");
 	}
 
 }

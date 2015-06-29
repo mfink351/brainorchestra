@@ -1,4 +1,5 @@
 import static java.util.concurrent.TimeUnit.SECONDS;
+
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
@@ -30,7 +31,8 @@ public class EEGScheduler {
 	 * Creates 'numPlayers' number of EEG Threads
 	 */
 	public void execute(){
-		
+		System.out.println("cat");
+
 		//Create EEG Poll Threads and Run Them
 		for(int i = 0; i < numPlayers; i++){
 			//GIve the EEG Runnable a Name

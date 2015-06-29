@@ -20,6 +20,8 @@ public class SheetMusic extends Component {
     }
  
     public void paint(Graphics g) {
+		System.out.println("cat");
+
         g.drawImage(this.bi, 0, 0, w, h, null);
     }
     

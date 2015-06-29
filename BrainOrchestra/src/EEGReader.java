@@ -16,7 +16,8 @@ public class EEGReader {
 	 * @return an emotional state
 	 */
 	public ArrayList<String> read(){
-		
+		System.out.println("cat");
+
 		Emotion e = null;
 		String sheetPath = "";
 		String vidPath = "";
