@@ -23,25 +23,25 @@ public class EEGReader {
 		
 		//Reads the EEG 
 		Random rn = new Random();
-		int max = 5;
 		int min = 1;
+		int max = 5;
 		int i = rn.nextInt(max - min + 1) + min;
 		//THIS CODE WILL NEED TO BE MODIFIED ONCE AN EEG IS CHOSEN
 		
 		if( i == 1){
-			e = e.ANGRY;
+			e = Emotion.ANGRY;
 		} 
 		else if( i == 2){
-			e = e.EXCITED;
+			e = Emotion.EXCITED;
 		} 
 		else if( i == 3){
-			e = e.HAPPY;
+			e = Emotion.HAPPY;
 		}
 		else if( i == 4){
-			e = e.SAD;
+			e = Emotion.SAD;
 		}
 		else {
-			e = e.SCARED;
+			e = Emotion.SCARED;
 		}
 		
 		sheetPath = EEGReader.getSheetPath(e);

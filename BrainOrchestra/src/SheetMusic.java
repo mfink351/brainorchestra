@@ -3,10 +3,10 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
-
 public class SheetMusic extends Component {
 	
-    private BufferedImage bi;
+	private static final long serialVersionUID = 1L;
+	private BufferedImage bi;
     int w, h;
      
     public SheetMusic(BufferedImage bi) {
@@ -20,13 +20,7 @@ public class SheetMusic extends Component {
     }
  
     public void paint(Graphics g) {
-        int dx, dy;
         g.drawImage(this.bi, 0, 0, w, h, null);
     }
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
+    
 }
