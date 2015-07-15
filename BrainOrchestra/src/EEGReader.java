@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Random;
 
+import com.neurosky.thinkgear.ThinkGear;
+
 //The main EEGReader Class with 
 public class EEGReader {
 	
@@ -16,8 +18,6 @@ public class EEGReader {
 	 * @return an emotional state
 	 */
 	public ArrayList<String> read(){
-		System.out.println("cat");
-
 		Emotion e = null;
 		String sheetPath = "";
 		String vidPath = "";
@@ -27,7 +27,23 @@ public class EEGReader {
 		int min = 1;
 		int max = 5;
 		int i = rn.nextInt(max - min + 1) + min;
-		//THIS CODE WILL NEED TO BE MODIFIED ONCE AN EEG IS CHOSEN
+		/**
+		 * EEG TEST CODE
+		 */
+		//System.out.println("Dll Version is: "+ThinkGear.GetDriverVersion());
+		int connectionId  = ThinkGear.GetNewConnectionId();
+		String comPortName = "\\\\.\\COM3";
+		ThinkGear.Connect(connectionId, comPortName, ThinkGear.BAUD_57600, ThinkGear.STREAM_PACKETS);
+		if(ThinkGear.GetValueStatus(connectionId, ThinkGear.DATA_RAW) != 0){
+			System.out.println("Get a raw data: " + ThinkGear.GetValue(connectionId, ThinkGear.DATA_RAW));
+			
+		} else {
+			System.out.println("Cat");
+		}
+		
+		/**
+		 * 
+		 */
 		
 		if( i == 1){
 			e = Emotion.ANGRY;

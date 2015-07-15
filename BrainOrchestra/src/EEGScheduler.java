@@ -31,7 +31,6 @@ public class EEGScheduler {
 	 * Creates 'numPlayers' number of EEG Threads
 	 */
 	public void execute(){
-		System.out.println("cat");
 
 		//Create EEG Poll Threads and Run Them
 		for(int i = 0; i < numPlayers; i++){

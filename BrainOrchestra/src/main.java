@@ -1,3 +1,5 @@
+import com.neurosky.thinkgear.ThinkGear;
+
 /**
  * 
  * @author mfink351
@@ -10,14 +12,13 @@
 public class main {
 
 	public static void main(String[] args){
-		/**int numReaders = 1;
+		int numReaders = 1;
 		int pollInterval = 2;
-		int pollDuration = 20;
+		int pollDuration = 30;
 		
 		EEGScheduler sched = new EEGScheduler(numReaders, pollInterval, pollDuration);
-		sched.execute();**/ 
+		sched.execute();
 		
-		System.out.println("cat");
 	}
 
 }

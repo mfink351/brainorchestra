@@ -73,7 +73,6 @@ public class EEGRunnable implements Runnable{
 		} catch (IOException e) {
 			System.out.println(e);
 		}
-		System.out.println("cat");
 
 		//Panel update and showing
 		this.f.getContentPane().removeAll();
