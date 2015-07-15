@@ -25,12 +25,11 @@ public class Hello {
 		while(true){
 
 			do{
-				packetsRead = ThinkGear.ReadPackets(connectionId, 1);
+				packetsRead = ThinkGear.ReadPackets(connectionId, -1);
 				
 				if(packetsRead == 1){
-					if(ThinkGear.GetValueStatus(connectionId, ThinkGear.DATA_RAW) != 0){
-						System.out.println("Get a raw data: " + ThinkGear.GetValue(connectionId, ThinkGear.DATA_RAW));
-						
+					if(ThinkGear.GetValueStatus(connectionId, ThinkGear.DATA_ATTENTION) != 0){
+						System.out.println("Get a attention data: " + ThinkGear.GetValue(connectionId, ThinkGear.DATA_ATTENTION));
 					}
 				}
 			}while(packetsRead > 0);

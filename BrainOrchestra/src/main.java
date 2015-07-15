@@ -13,8 +13,9 @@ public class main {
 
 	public static void main(String[] args){
 		int numReaders = 1;
-		int pollInterval = 2;
-		int pollDuration = 30;
+		//In seconds
+		int pollInterval = 4;
+		int pollDuration = 4000;
 		
 		EEGScheduler sched = new EEGScheduler(numReaders, pollInterval, pollDuration);
 		sched.execute();
