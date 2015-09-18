@@ -48,6 +48,12 @@ public class EEGScheduler {
 		            }, this.pollDuration, SECONDS);	
 		}
 	}
+	
+	public void shutdown(){
+		this.scheduler.shutdown();
+	}
+	
+
 
 }
 

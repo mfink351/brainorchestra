@@ -4,7 +4,6 @@
  *
  */
 
-
 public enum Emotion {
 	HAPPY, SAD, ANGRY, SCARED,
 	EXCITED

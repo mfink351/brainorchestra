@@ -195,7 +195,7 @@ public class EEGReader {
 		 * Write readings to file
 		 * 
 		 */
-		this.write2File("test.txt", readings);
+		this.write2File("ClipA-MikeFink.txt", readings);
 		
 		return readings;
 	}
@@ -219,6 +219,8 @@ public class EEGReader {
 	 * 
 	 * @return A state as determined by our classifier in the futre
 	 */
+	
+	//THIS IS WHERE THE LIBSVM IMPLEMENTATION WILL GO
 	private int getState(ArrayList<Double> readings){
 		if(readings.get(0) > 50){
 			return 1;
