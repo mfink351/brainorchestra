@@ -33,7 +33,7 @@ public class main {
 			}
 			while(!reader.nextLine().equals(""));
 			
-			EEGScheduler sched = new EEGScheduler(numReaders, pollInterval, pollDuration);
+			EEGScheduler sched = new EEGScheduler(numReaders, pollInterval, pollDuration, subject, clip);
 			sched.execute();
 			
 			while(true){

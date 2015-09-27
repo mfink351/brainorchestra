@@ -10,10 +10,14 @@ import com.neurosky.thinkgear.ThinkGear;
 public class EEGReader {
 	
 	private int connectionId;
+	private String name;
+	private String clip;
 	
 	//Class Constructor
-	public EEGReader(){
+	public EEGReader(String name, String clip){
 		this.connectionId  = ThinkGear.GetNewConnectionId();
+		this.name = name;
+		this.clip = clip;
 		String comPortName = "\\\\.\\COM3";
 		ThinkGear.Connect(connectionId, comPortName, ThinkGear.BAUD_57600, ThinkGear.STREAM_PACKETS);
 	}
@@ -195,7 +199,8 @@ public class EEGReader {
 		 * Write readings to file
 		 * 
 		 */
-		this.write2File("ClipA-MikeFink.txt", readings);
+		String write2 = "Clip" + this.clip + "-" + this.name + ".txt";
+		this.write2File(write2, readings);
 		
 		return readings;
 	}

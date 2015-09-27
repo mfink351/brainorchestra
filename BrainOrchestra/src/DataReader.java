@@ -33,7 +33,7 @@ public class DataReader {
 			System.out.print("Ener clip letter: ");
 			String clip = reader.nextLine();
 		
-			try (BufferedReader br = new BufferedReader(new FileReader("Clip"+clip+"-" + subject + ".txt"))) {
+			try (BufferedReader br = new BufferedReader(new FileReader("Clip" +clip+ "-" + subject + ".txt"))) {
 			    String line;
 			    while ((line = br.readLine()) != null) {
 			    	line = line.replace('[', ' ').replace(']', ' ').replaceAll(" ", "");

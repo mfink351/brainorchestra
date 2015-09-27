@@ -21,13 +21,13 @@ public class EEGRunnable implements Runnable{
 	private final JFrame f;
 	private SheetMusic prevSheet;
 
-	public EEGRunnable(String name){
+	public EEGRunnable(String name, String subject, String clip){
 		//Set up this thread's name
 		this.name = name;
 		this.numTimesRun = 1;
 		
 		//Set up EEG
-		this.eeg = new EEGReader();
+		this.eeg = new EEGReader(subject, clip);
 		
 		//Set up JFrame
 		this.f = new JFrame("Sheet Music");
